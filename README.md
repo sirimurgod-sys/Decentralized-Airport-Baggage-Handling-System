@@ -46,26 +46,21 @@ Node ID	Component	Role
 Each node communicates using ESP-NOW protocol, enabling low-latency, connectionless communication.
 ________________________________________
 📂 Repository Structure
-├── sketch.ino 
-# Core ESP32 distributed protocol implementation
+├── sketch.ino # Core ESP32 distributed protocol implementation
 
-├── diagram.json   
-# Wokwi simulation configuration
+├── diagram.json   # Wokwi simulation configuration
 
 ├── data/
 
-│   ├── trial_data.csv 
-# Raw results (45 trials)
+│   ├── trial_data.csv # Raw results (45 trials)
 
 │   └── analysis_results.xlsx
 
 ├── results/
 
-│   └── figures/
-# Graphs used in the paper
+│   └── figures/# Graphs used in the paper
 
-└── README.md               
-# Documentation
+└── README.md               # Documentation
 ________________________________________
 ⚙️ Requirements
 
