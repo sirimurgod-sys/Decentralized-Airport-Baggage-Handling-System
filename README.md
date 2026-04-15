@@ -48,12 +48,19 @@ ________________________________________
 📂 Repository Structure
 
 ├── sketch.ino # Core ESP32 distributed protocol implementation
+
 ├── diagram.json   # Wokwi simulation configuration
+
 ├── data/
+
 │   ├── trial_data.csv # Raw results (45 trials)
+
 │   └── analysis_results.xlsx
+
 ├── results/
+
 │   └── figures/# Graphs used in the paper
+
 └── README.md               # Documentation
 ________________________________________
 ⚙️ Requirements
@@ -96,9 +103,12 @@ Steps:
     
 2.	Upload sketch.ino to each
    
-3.	Assign node IDs: 
+3.	Assign node IDs:
+    
 #define MY_NODE_ID X
+
 Node	ID
+
 Conveyor A	(1)
 
 Diverter	(2)
