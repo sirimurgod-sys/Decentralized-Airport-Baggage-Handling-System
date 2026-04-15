@@ -12,6 +12,7 @@ Instead of rigid control hierarchies, the system adopts a distributed negotiatio
 __________________________________________________________________________________________________________________
 
 🚀 Key Contributions
+
 •	⚡ 35.4% reduction in baggage transit time under congestion
 
 •	🛡️ 100% fault tolerance during node failure scenarios 
@@ -22,8 +23,11 @@ ________________________________________________________________________________
 
 ________________________________________
 🧠 System Architecture
+
 The system consists of five cooperative embedded nodes:
+
 Node ID	Component	Role
+
 1	Conveyor A  -->	Initial bag transport
 
 
@@ -42,14 +46,26 @@ Node ID	Component	Role
 Each node communicates using ESP-NOW protocol, enabling low-latency, connectionless communication.
 ________________________________________
 📂 Repository Structure
-├── sketch.ino              # Core ESP32 distributed protocol implementation
-├── diagram.json            # Wokwi simulation configuration
+├── sketch.ino 
+# Core ESP32 distributed protocol implementation
+
+├── diagram.json   
+# Wokwi simulation configuration
+
 ├── data/
-│   ├── trial_data.csv      # Raw results (45 trials)
+
+│   ├── trial_data.csv 
+# Raw results (45 trials)
+
 │   └── analysis_results.xlsx
+
 ├── results/
-│   └── figures/            # Graphs used in the paper
-└── README.md               # Documentation
+
+│   └── figures/
+# Graphs used in the paper
+
+└── README.md               
+# Documentation
 ________________________________________
 ⚙️ Requirements
 
@@ -74,13 +90,17 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 •	Install ESP32 via Boards Manager 
 ________________________________________
 3. Libraries
+   
 No external libraries required:
+
 •	esp_now.h
 
 •	WiFi.h 
 ________________________________________
 🧪 Simulation Setup
+
 🔹 Option A: Online Simulation (Recommended)
+
 Use Wokwi ESP32 Simulator
 Steps:
 1.	Create 5 separate simulation instances
@@ -141,6 +161,7 @@ ________________________________________
 #define NODE_FAILURE_TIMEOUT   5000
 ________________________________________
 📡 Communication Model
+
 Message Type	Purpose
 
 PRIORITY_ALERT	RFID detects priority
@@ -285,6 +306,7 @@ ________________________________________
 •	Email: 1bi25ec148@bit-bangalore.edu.in
 ________________________________________
 🙏 Acknowledgments
+
 •	IEEE for research platform 
 
 •	Espressif Systems for ESP32 & ESP-NOW
