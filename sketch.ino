@@ -2,6 +2,12 @@
 // COMPLETE BAGGAGE HANDLING SYSTEM - WITH METRICS
 // Captures: Transit Time, Message Bytes, Negotiation Latency
 // ============================================================
+// COMPLETE BAGGAGE HANDLING SYSTEM - ALL 45 TRIALS
+// Authors: Saubalini Gopalakrishnan Vaneeswari, Siri M
+// Institution: Bangalore Institute of Technology, Visvesvaraya Technological University
+// IEEE WIN-TECH 2026 Submission
+// ============================================================
+// ============================================================
 
 #include <esp_now.h>
 #include <WiFi.h>
