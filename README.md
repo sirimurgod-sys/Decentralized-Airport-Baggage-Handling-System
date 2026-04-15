@@ -1,10 +1,14 @@
 # Decentralized-Airport-Baggage-Handling-System
 This repository presents a distributed coordination framework for airport baggage handling systems using low-cost ESP32 nodes. Unlike centralized PLC-based systems that create single points of failure, it enables intelligent peer-to-peer negotiation among conveyors, diverters, RFID scanners, and carousel nodes.
+
+
 📌 Overview
 This repository presents the complete implementation and simulation framework for the IEEE conference paper:
 “Decentralized Coordination of Embedded Nodes in Airport Baggage Handling Systems: A Distributed Negotiation Approach”
 The project reimagines traditional airport baggage systems by eliminating centralized PLC control and enabling autonomous, peer-to-peer coordination among ESP32-based embedded nodes.
 Instead of rigid control hierarchies, the system adopts a distributed negotiation protocol, allowing nodes (conveyors, diverters, RFID scanners, and carousels) to dynamically collaborate in real time.
+__________________________________________________________________________________________________________________
+
 🚀 Key Contributions
 •	⚡ 35.4% reduction in baggage transit time under congestion 
 •	🛡️ 100% fault tolerance during node failure scenarios 
@@ -14,11 +18,13 @@ ________________________________________
 🧠 System Architecture
 The system consists of five cooperative embedded nodes:
 Node ID	Component	Role
-1	Conveyor A	Initial bag transport
-2	Diverter	Decision-making and routing
-3	Conveyor B	Secondary path (congestion-prone)
-4	RFID Scanner	Priority detection
-5	Carousel	Final destination & logging
+1	Conveyor A  -->	Initial bag transport
+2	Diverter	--> Decision-making and routing
+3	Conveyor B	--> Secondary path (congestion-prone)
+4	RFID Scanner	--> Priority detection
+5	Carousel	--> Final destination & logging
+
+
 Each node communicates using ESP-NOW protocol, enabling low-latency, connectionless communication.
 ________________________________________
 📂 Repository Structure
@@ -32,7 +38,9 @@ ________________________________________
 └── README.md               # Documentation
 ________________________________________
 ⚙️ Requirements
+
 Tool	Version	Purpose
+
 Arduino IDE	2.0+	Code development
 ESP32 Board Package	3.0.0+	Board support
 Wokwi Simulator	Latest	Online simulation
@@ -57,17 +65,21 @@ ________________________________________
 🔹 Option A: Online Simulation (Recommended)
 Use Wokwi ESP32 Simulator
 Steps:
-1.	Create 5 separate simulation instances 
-2.	Upload sketch.ino to each 
+1.	Create 5 separate simulation instances
+    
+2.	Upload sketch.ino to each
+   
 3.	Assign node IDs: 
 #define MY_NODE_ID X
 Node	ID
-Conveyor A	1
-Diverter	2
-Conveyor B	3
-RFID	4
-Carousel	5
-4.	Run all simulations simultaneously 
+Conveyor A	(1)
+Diverter	(2)
+Conveyor B	(3)
+RFID	(4)
+Carousel	(5)
+
+4.	Run all simulations simultaneously
+  
 5.	Open Node 5 Serial Monitor for results 
 ________________________________________
 🔹 Option B: Physical Deployment
