@@ -192,8 +192,8 @@ MIT License
 | 1.0     | April 2026 | Initial 45-trial release |
 | 2.0     | April 2026 | Extended to 90 trials    |
 
----
-#Authors
+__________________________________________________________
+##Authors
 
 •	Saubalini Gopalakrishnan Vaneeswari 
 •	Department of Electronics & Communication Engineering 
@@ -204,8 +204,8 @@ MIT License
 •	Department of Electronics & Communication Engineering 
 •	Visvesvaraya Technological University
 •	Email: 1bi25ec148@bit-bangalore.edu.in
-________________________________________
-🙏 Acknowledgments
+___________________________________________________________
+##🙏 Acknowledgments
 
 •	IEEE for research platform 
 
