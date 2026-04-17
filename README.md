@@ -1,299 +1,200 @@
-# Decentralized-Airport-Baggage-Handling-System
-This repository presents a distributed coordination framework for airport baggage handling systems using low-cost ESP32 nodes. Unlike centralized PLC-based systems that create single points of failure, it enables intelligent peer-to-peer negotiation among conveyors, diverters, RFID scanners, and carousel nodes.
+# Decentralized Coordination of Embedded Nodes in Airport Baggage Handling Systems
 
+## Overview
 
-📌 Overview
-This repository presents the complete implementation and simulation framework for the IEEE conference paper:
-“Decentralized Coordination of Embedded Nodes in Airport Baggage Handling Systems: A Distributed Negotiation Approach”
-The project reimagines traditional airport baggage systems by eliminating centralized PLC control and enabling autonomous, peer-to-peer coordination among ESP32-based embedded nodes.
+This repository presents the simulation framework, experimental datasets, and analysis for the IEEE conference paper:
 
+**“Decentralized Coordination of Embedded Nodes in Airport Baggage Handling Systems: A Distributed Negotiation Approach.”**
 
-Instead of rigid control hierarchies, the system adopts a distributed negotiation protocol, allowing nodes (conveyors, diverters, RFID scanners, and carousels) to dynamically collaborate in real time.
-__________________________________________________________________________________________________________________
+The work proposes a **fully distributed coordination protocol** in which ESP32-based embedded nodes—representing conveyor belts, diverters, RFID scanners, and carousels—negotiate decisions autonomously, eliminating reliance on a centralized PLC.
+This work addresses the critical lack of standardized interaction mechanisms among multi-vendor embedded systems in airport environments, enabling heterogeneous nodes from different manufacturers to seamlessly coordinate without proprietary protocols or centralized controllers.
+---
 
-🚀 Key Contributions
+## Key Contributions
 
-•	⚡ 35.4% reduction in baggage transit time under congestion
+* **Decentralized decision-making** using distributed voting and negotiation
+* **Real-time coordination** under congestion, failure, and peak load
+* **Fault-tolerant routing** with dynamic recovery
+* **Low-overhead communication** using ESP-NOW protocol
+* **Statistically validated performance gains**
 
-•	🛡️ 100% fault tolerance during node failure scenarios 
+---
 
-•	⏱️ Sub-second negotiation latency (mean: 177 ms) 
+## Key Results
 
-•	🔁 Fully decentralized decision-making architecture (no single point of failure)
+| Metric                    | 45 Trials | 90 Trials | Change   |
+| ------------------------- | --------- | --------- | -------- |
+| S2 Congestion Improvement | 35.4%     | **52.1%** | ↑ +16.7% |
+| S4 Priority Burst         | —         | **39.2%** | New      |
+| S5 Peak Load              | —         | **41.7%** | New      |
+| Fault Tolerance           | 0% → 100% | 0% → 100% | —        |
+| Mean Latency              | 177 ms    | 187 ms    | +10 ms   |
+| Message Overhead          | 342 B     | 342 B     | —        |
 
-________________________________________
-🧠 System Architecture
+---
 
-The system consists of five cooperative embedded nodes:
+## Repository Structure
 
-Node ID	Component	Role
-
-1	Conveyor A  -->	Initial bag transport
-
-
-2	Diverter	--> Decision-making and routing
-
-
-3	Conveyor B	--> Secondary path (congestion-prone)
-
-
-4	RFID Scanner	--> Priority detection
-
-
-5	Carousel	--> Final destination & logging
-
-
-Each node communicates using ESP-NOW protocol, enabling low-latency, connectionless communication.
-________________________________________
-📂 Repository Structure
-
-├── sketch.ino # Core ESP32 distributed protocol implementation
-
-├── diagram.json   # Wokwi simulation configuration
-
+```
+├── sketch.ino
+├── diagram.json
+├── README.md
 ├── data/
+│   ├── 45_trials/
+│   └── 90_trials/
+├── figures/
+│   ├── 45_trials/
+│   └── 90_trials/
+└── results/
+```
 
-│   ├── trial_data.csv # Raw results (45 trials)
+---
 
-│   └── analysis_results.xlsx
+## System Configurations
 
-├── results/
+| Code | Configuration      | Description                          |
+| ---- | ------------------ | ------------------------------------ |
+| 0    | Baseline           | Centralized PLC control              |
+| 1    | Communication-only | Message exchange without negotiation |
+| 2    | Proposed           | Distributed negotiation protocol     |
 
-│   └── figures/# Graphs used in the paper
+---
 
-└── README.md               # Documentation
-________________________________________
-⚙️ Requirements
+## Experimental Scenarios (90 Trials)
 
-Tool	Version	Purpose
+| Code | Scenario       | Description                |
+| ---- | -------------- | -------------------------- |
+| S1   | Normal Flow    | Standard operation         |
+| S2   | Congestion     | High load on Conveyor B    |
+| S3   | Node Failure   | Conveyor B failure         |
+| S4   | Priority Burst | Consecutive priority bags  |
+| S5   | Peak Load      | Maximum throughput         |
+| S6   | Recovery       | Post-failure stabilization |
 
-Arduino IDE	2.0+	Code development
+---
 
-ESP32 Board Package	3.0.0+	Board support
+## Trial Design
 
-Wokwi Simulator	Latest	Online simulation
+* **45 Trials:**
+  3 Configurations × 3 Scenarios × 5 Trials
 
-Python (optional)	3.11+	Statistical analysis
-________________________________________
-🛠️ Installation & Setup
-1. Clone Repository
+* **90 Trials:**
+  3 Configurations × 6 Scenarios × 5 Trials
+
+> Note: Representative subsets are visualized in figures, while aggregate metrics are computed over all trials.
+
+---
+
+## Key Findings
+
+### Performance Gains
+
+* Up to **52.1% reduction in transit time** under congestion
+* Significant improvements under peak and priority conditions
+* Large effect sizes indicating strong practical impact
+
+### Real-Time Feasibility
+
+* Mean latency: **187 ms**
+* Worst-case latency: **< 220 ms**
+* Suitable for real-time embedded control systems
+
+### Fault Tolerance
+
+* **100% completion rate** under node failure
+* Autonomous rerouting without central intervention
+
+### Communication Efficiency
+
+* **342 bytes per trial**
+* <0.1% of ESP32 RAM usage
+
+---
+
+## Installation
+
+```bash
 git clone https://github.com/yourusername/baggage-handling-distributed.git
 cd baggage-handling-distributed
-2. Configure Arduino IDE
-•	Open Preferences 
-•	Add: 
-https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
-•	Install ESP32 via Boards Manager 
-________________________________________
-3. Libraries
-   
-No external libraries required:
+```
 
-•	esp_now.h
+### Arduino Setup
 
-•	WiFi.h 
-________________________________________
-🧪 Simulation Setup
+* Install ESP32 board package
+* Required libraries:
 
-🔹 Option A: Online Simulation (Recommended)
+  * `esp_now.h`
+  * `WiFi.h`
 
-Use Wokwi ESP32 Simulator
-Steps:
-1.	Create 5 separate simulation instances
-    
-2.	Upload sketch.ino to each
-   
-3.	Assign node IDs:
-    
-#define MY_NODE_ID X
+---
 
-Node	ID
+## Simulation (Wokwi)
 
-Conveyor A	(1)
+### Steps:
 
-Diverter	(2)
+1. Create 5 ESP32 instances
+2. Assign node IDs:
 
-Conveyor B	(3)
+   * 1: Conveyor A
+   * 2: Diverter
+   * 3: Conveyor B
+   * 4: RFID
+   * 5: Carousel
+3. Run all simultaneously
+4. Monitor Node 5 for CSV output
 
-RFID	(4)
+---
 
-Carousel	(5)
+## Output Format
 
-5.	Run all simulations simultaneously
-  
-6.	Open Node 5 Serial Monitor for results 
-________________________________________
-🔹 Option B: Physical Deployment
-•	Flash code to 5 ESP32 boards 
+| Field          | Description            |
+| -------------- | ---------------------- |
+| trial_id       | Trial number           |
+| config         | System configuration   |
+| scenario       | Scenario ID            |
+| transit_time_s | Transit time           |
+| latency_ms     | Negotiation latency    |
+| message_bytes  | Communication overhead |
 
-•	Ensure same Wi-Fi channel 
+---
 
-•	Monitor outputs via serial 
-________________________________________
-🔄 Experimental Configurations
+## Reproducibility
 
-Configurations
+To reproduce results:
 
-Code	Mode	Description
-0	Baseline	Centralized PLC
+1. Run all simulations
+2. Collect Node 5 output
+3. Save as CSV
+4. Execute statistical script
 
-1	Communication-only	No negotiation
+---
 
-2	Proposed	Full distributed negotiation
-________________________________________
-Scenarios
+## Citation
 
-Code	Scenario	Description
-
-1	Normal Flow	No congestion
-
-2	Congestion	Priority + bottleneck
-
-3	Node Failure	Conveyor B failure
-________________________________________
-⚡ Core Protocol Parameters
-
-#define VOTE_TIMEOUT           500
-
-#define HEARTBEAT_INTERVAL     2000
-
-#define NODE_FAILURE_TIMEOUT   5000
-________________________________________
-📡 Communication Model
-
-Message Type	Purpose
-
-PRIORITY_ALERT	RFID detects priority
-
-
-STATUS	Congestion reporting
-
-
-VOTE_REQUEST	Diverter initiates negotiation
-
-
-VOTE_RESPONSE	Cost evaluation
-
-
-ACTION	Final routing decision
-
-
-COMPLETE	Delivery confirmation
-
-
-HEARTBEAT	Node health monitoring
-________________________________________
-📊 Output Data Format
-
-
-The system logs structured CSV data:
-
-
-Field	Description
-
-trial_id	Trial number
-
-node_id	Node identifier
-
-config	System configuration
-
-scenario	Scenario type
-
-transit_time_s	Time taken
-
-latency_ms	Negotiation delay
-
-message_bytes	Communication overhead
-
-congestion	System load
-
-queue	Queue length
-________________________________________
-📈 Results Summary
-
-Scenario: Congestion (S2)
-
-
-Configuration	Transit Time	Latency	Improvement
-
-
-Baseline	44.02s	0 ms	—
-
-Comm-only	37.86s	0 ms	13.9%
-
-Proposed	28.46s	177 ms	35.4%
-________________________________________
-🔬 Statistical Significance
-
-•	p-value < 0.001 → Highly significant
-
-•	Large effect sizes (Cohen’s d > 10)
-
-•	Strong validation of distributed approach 
-________________________________________
-🛡️ Fault Tolerance (S3)
-
-Configuration	Completion Rate
-
-
-Baseline	0%
-
-Comm-only	0%
-
-Proposed	100%
-________________________________________
-🔁 Automated Trial Execution
-
-The system runs:
-
-3 Configurations × 3 Scenarios × 5 Trials = 45 Trials
-
-Execution is fully automated within the firmware.
-________________________________________
-🧮 Data Analysis (Python)
-
-import pandas as pd
-from scipy import stats
-
-df = pd.read_csv('trial_data.csv')
-s2 = df[df['scenario'] == 2]
-
-baseline = s2[s2['config'] == 0]['transit_time_s']
-proposed = s2[s2['config'] == 2]['transit_time_s']
-
-t_stat, p_val = stats.ttest_ind(baseline, proposed)
-print(p_val)
-________________________________________
-⚠️ Troubleshooting
-
-ESP-NOW Issues
-
-•	Ensure all nodes are active simultaneously 
-
-Callback Error
-
-•	Use updated ESP32 v3.0+ signature: 
-
-void OnDataRecv(const esp_now_recv_info_t *info, const uint8_t *data, int len)
-
-Missing Data
-
-•	Only Node 5 logs final outputs 
-________________________________________
-📚 Citation
-
-
-@inproceedings{yourname2026decentralized,
+```bibtex
+@inproceedings{saubalini2026decentralized,
   title={Decentralized Coordination of Embedded Nodes in Airport Baggage Handling Systems},
-  author={Your Name},
+  author={Saubalini Gopalakrishnan Vaneeswari and Siri M},
   booktitle={IEEE WIN-TECH Conference},
   year={2026}
 }
-________________________________________
-📜 License
+---
+
+## License
+
 MIT License
-________________________________________
-👤 Author
+---
+
+## Version History
+
+| Version | Date       | Changes                  |
+| ------- | ---------- | ------------------------ |
+| 1.0     | April 2026 | Initial 45-trial release |
+| 2.0     | April 2026 | Extended to 90 trials    |
+
+---
+#Authors
+
 •	Saubalini Gopalakrishnan Vaneeswari 
 •	Department of Electronics & Communication Engineering 
 •	Visvesvaraya Technological University
