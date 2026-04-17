@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "author": "Saubalini Gopalakrishnan Vaneeswari, Siri M",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "name": "ESP32 - Baggage Handling Node (90 Trials)",
+      "connections": []
+    }
+  ],
+  "connections": [],
+  "description": "ESP32 DevKit V1 for Decentralized Baggage Handling System - 90 Trials (6 Scenarios: S1 to S6). Authors: Saubalini Gopalakrishnan Vaneeswari & Siri M"
+}
