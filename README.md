@@ -49,9 +49,7 @@ This work addresses the critical lack of standardized interaction mechanisms amo
 ├── results/
 │ ├── 45_trials/
 │ ├── 90_trials/
-│ └── 315_trials/ # Aggregated results and stats
-
-```
+ └── 315_trials/ # Aggregated results and stats
 
 ---
 
