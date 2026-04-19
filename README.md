@@ -33,19 +33,24 @@ This work addresses the critical lack of standardized interaction mechanisms amo
 
 ---
 
-## Repository Structure
+## 📁 Project Structure
 
-```
 ├── sketch.ino
 ├── diagram.json
 ├── README.md
 ├── data/
-│   ├── 45_trials/
-│   └── 90_trials/
+│ ├── 45_trials/
+│ ├── 90_trials/
+│ └── 315_trials/ # Extended DIS study (63 combinations)
 ├── figures/
-│   ├── 45_trials/
-│   └── 90_trials/
-└── results/
+│ ├── 45_trials/
+│ ├── 90_trials/
+│ └── 315_trials/ # Plots for extended evaluation
+├── results/
+│ ├── 45_trials/
+│ ├── 90_trials/
+│ └── 315_trials/ # Aggregated results and stats
+
 ```
 
 ---
