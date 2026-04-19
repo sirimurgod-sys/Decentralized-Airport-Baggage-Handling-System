@@ -1,0 +1,29 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Data for best combination (S1+S3) and worst combination (S2+S4+S5+S6)
+best_combo_data = [26.7, 26.8, 27.4, 28.3, 27.1]  # S1+S3 trials
+worst_combo_data = [64.2, 61.7, 62.0, 62.5, 64.7]  # S2+S4+S5+S6 trials
+
+fig, ax = plt.subplots(figsize=(8, 6))
+bp = ax.boxplot([best_combo_data, worst_combo_data], 
+                labels=['Best Combination\n(S1+S3)', 'Worst Combination\n(S2+S4+S5+S6)'],
+                patch_artist=True)
+
+colors = ['#10B981', '#EF4444']
+for patch, color in zip(bp['boxes'], colors):
+    patch.set_facecolor(color)
+    patch.set_alpha(0.7)
+
+# Add mean values
+ax.text(1, 27.5, f'Mean: {np.mean(best_combo_data):.1f}s', ha='center', fontsize=10, fontweight='bold')
+ax.text(2, 63.5, f'Mean: {np.mean(worst_combo_data):.1f}s', ha='center', fontsize=10, fontweight='bold')
+
+ax.set_ylabel('Transit Time (seconds)', fontsize=12, fontweight='bold')
+ax.set_title('Figure 8: Best vs Worst Performing Combinations', fontsize=14, fontweight='bold')
+ax.grid(axis='y', linestyle='--', alpha=0.3)
+
+plt.tight_layout()
+plt.savefig('figure8_best_vs_worst.png', dpi=300, bbox_inches='tight')
+plt.show()
+print("✓ Figure 8 saved")
