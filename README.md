@@ -36,24 +36,24 @@ This work addresses the critical lack of standardized interaction mechanisms amo
 ## 📁 Project Structure
 
 ### Root Files
-- 'sketch.ino' — Main ESP32 simulation code
-- 'diagram.json' — System architecture / simulation diagram
-- 'README.md' — Project documentation
+- `sketch.ino` — Main ESP32 simulation code
+- `diagram.json` — System architecture / simulation diagram
+- `README.md` — Project documentation
   
 ### 📊 Data (Raw Experimental Datasets)
-- 'data/45_trials/'
-- 'data/90_trials/'
-- 'data/315_trials/'
+- `data/45_trials/`
+- `data/90_trials/`
+- `data/315_trials/`
   
 ### 📈 Figures (Generated Visualizations)
-- 'figures/45_trials/'
-- 'figures/90_trials/'
-- 'figures/315_trials/'
+- `figures/45_trials/`
+- `figures/90_trials/`
+- `figures/315_trials/`
   
 ### 📉 Results (Processed Outputs & Analysis)
-- 'results/45_trials/'
-- 'results/90_trials/'
-- 'results/315_trials/'
+- `results/45_trials/`
+- `results/90_trials/`
+- `results/315_trials/`
 
 ---
 
@@ -142,11 +142,11 @@ cd baggage-handling-distributed
 1. Create 5 ESP32 instances
 2. Assign node IDs:
 
-   - '1' : Conveyor A
-   - '2' : Diverter
-   - '3' : Conveyor B
-   - '4' : RFID
-   - '5' : Carousel
+   - `1` : Conveyor A
+   - `2` : Diverter
+   - `3` : Conveyor B
+   - `4` : RFID
+   - `5` : Carousel
 3. Run all simultaneously
 4. Monitor **Node 5** for CSV output
 
@@ -269,7 +269,7 @@ The system achieved **100% successful execution across all 315 trials**, demonst
   booktitle={IEEE WIN-TECH Conference},
   year={2026}
 }
----
+```
 
 ## License
 
