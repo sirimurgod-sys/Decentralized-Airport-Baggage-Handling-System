@@ -12,11 +12,11 @@ This work addresses the critical lack of standardized interaction mechanisms amo
 
 ## Key Contributions
 
-* **Decentralized decision-making** using distributed voting and negotiation
-* **Real-time coordination** under congestion, failure, and peak load
-* **Fault-tolerant routing** with dynamic recovery
-* **Low-overhead communication** using ESP-NOW protocol
-* **Statistically validated performance gains**
+- **Decentralized decision-making** using distributed voting and negotiation
+- **Real-time coordination** under congestion, failure, and peak load
+- **Fault-tolerant routing** with dynamic recovery
+- **Low-overhead communication** using ESP-NOW protocol
+- **Statistically validated performance gains**
 
 ---
 
@@ -35,23 +35,25 @@ This work addresses the critical lack of standardized interaction mechanisms amo
 
 ## 📁 Project Structure
 
-📁 Project Structure
-Root Files
-sketch.ino — Main ESP32 simulation code
-diagram.json — System architecture / simulation diagram
-README.md — Project documentation
-📊 Data (Raw Experimental Datasets)
-data/45_trials/
-data/90_trials/
-data/315_trials/
-📈 Figures (Generated Visualizations)
-figures/45_trials/
-figures/90_trials/
-figures/315_trials/
-📉 Results (Processed Outputs & Analysis)
-results/45_trials/
-results/90_trials/
-results/315_trials/
+### Root Files
+- 'sketch.ino' — Main ESP32 simulation code
+- 'diagram.json' — System architecture / simulation diagram
+- 'README.md' — Project documentation
+  
+### 📊 Data (Raw Experimental Datasets)
+- 'data/45_trials/'
+- 'data/90_trials/'
+- 'data/315_trials/'
+  
+### 📈 Figures (Generated Visualizations)
+- 'figures/45_trials/'
+- 'figures/90_trials/'
+- 'figures/315_trials/'
+  
+### 📉 Results (Processed Outputs & Analysis)
+- 'results/45_trials/'
+- 'results/90_trials/'
+- 'results/315_trials/'
 
 ---
 
@@ -80,13 +82,13 @@ results/315_trials/
 
 ## Trial Design
 
-* **45 Trials:**
+- **45 Trials:**
   3 Configurations × 3 Scenarios × 5 Trials
 
-* **90 Trials:**
+- **90 Trials:**
   3 Configurations × 6 Scenarios × 5 Trials
 
-> Note: Representative subsets are visualized in figures, while aggregate metrics are computed over all trials.
+> Representative subsets are visualized in figures, while aggregate metrics are computed over all trials.
 
 ---
 
@@ -94,25 +96,25 @@ results/315_trials/
 
 ### Performance Gains
 
-* Up to **52.1% reduction in transit time** under congestion
-* Significant improvements under peak and priority conditions
-* Large effect sizes indicating strong practical impact
+- Up to **52.1% reduction in transit time** under congestion
+- Significant improvements under peak and priority conditions
+- Large effect sizes indicating strong practical impact
 
 ### Real-Time Feasibility
 
-* Mean latency: **187 ms**
-* Worst-case latency: **< 220 ms**
-* Suitable for real-time embedded control systems
+- Mean latency: **187 ms**
+- Worst-case latency: **< 220 ms**
+- Suitable for real-time embedded control systems
 
 ### Fault Tolerance
 
-* **100% completion rate** under node failure
-* Autonomous rerouting without central intervention
+- **100% completion rate** under node failure
+- Autonomous rerouting without central intervention
 
 ### Communication Efficiency
 
-* **342 bytes per trial**
-* <0.1% of ESP32 RAM usage
+- **342 bytes per trial**
+- <0.1% of ESP32 RAM usage
 
 ---
 
@@ -140,13 +142,13 @@ cd baggage-handling-distributed
 1. Create 5 ESP32 instances
 2. Assign node IDs:
 
-   * 1: Conveyor A
-   * 2: Diverter
-   * 3: Conveyor B
-   * 4: RFID
-   * 5: Carousel
+   - '1' : Conveyor A
+   - '2' : Diverter
+   - '3' : Conveyor B
+   - '4' : RFID
+   - '5' : Carousel
 3. Run all simultaneously
-4. Monitor Node 5 for CSV output
+4. Monitor **Node 5** for CSV output
 
 ---
 
@@ -224,7 +226,7 @@ Each configuration was tested over **5 trials**, resulting in a total of **315 e
 
 ### 🛡️ Fault Tolerance
 
-- Node failure scenario (S3) had **no statistically significant impact** on performance  
+- Node failure scenario (S3) had **no statistically significant impact on performance**  
 - Indicates strong **system resilience under failure conditions**
 
 ---
@@ -284,15 +286,15 @@ MIT License
 __________________________________________________________
 ##Authors
 
-•	Saubalini Gopalakrishnan Vaneeswari 
-•	1st year, Department of Electronics & Communication Engineering 
-•	Bangalore Institute of Technology, Visvesvaraya Technological University
-•	Email: 1bi25ec133@bit-bangalore.edu.in
+###	Saubalini Gopalakrishnan Vaneeswari 
+-	1st year, Department of Electronics & Communication Engineering 
+-	Bangalore Institute of Technology, Visvesvaraya Technological University
+-	Email: 1bi25ec133@bit-bangalore.edu.in
 
-•	Siri M
-•	1st year, Department of Electronics & Communication Engineering 
-•	Bangalore Institute of Technology, Visvesvaraya Technological University
-•	Email: 1bi25ec148@bit-bangalore.edu.in
+###	Siri M
+-	1st year, Department of Electronics & Communication Engineering 
+-	Bangalore Institute of Technology, Visvesvaraya Technological University
+-	Email: 1bi25ec148@bit-bangalore.edu.in
 ___________________________________________________________
 ##🙏 Acknowledgments
 
