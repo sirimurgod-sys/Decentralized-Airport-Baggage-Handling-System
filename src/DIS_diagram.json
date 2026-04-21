@@ -6,7 +6,7 @@
     {
       "type": "wokwi-esp32-devkit-v1",
       "id": "esp",
-      "name": "ESP32 - Baggage Handling Node (315 Trials)",
+      "name": "ESP32_Baggage_Handling_Node (315 Trials)",
       "connections": []
     }
   ],
