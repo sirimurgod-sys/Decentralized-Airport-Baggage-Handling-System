@@ -46,9 +46,9 @@ This project implements a **distributed coordination protocol** for airport bagg
 
 3. **Real-Time Feasibility** : Mean latency of 187-238ms meets airport requirements (<500ms)
 
-4. **Robustness** : System completed all 315 trials across 63 scenario combinations without a single failure
+4. **Robustness** : The System successfully completed all 315 trials across 63 scenario combinations without any failure
 
-5. **Node Failure Impact** : No statistically significant impact (p > 0.05) when combined with other scenarios
+5. **Node Failure Impact** : No statistically significant impact was observed (p > 0.05) when combined with other scenarios
 
 ## Statistical Significance
 
