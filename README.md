@@ -35,27 +35,23 @@ This work addresses the critical lack of standardized interaction mechanisms amo
 
 ## 📁 Project Structure
 
-sketch.ino
-diagram.json
-README.md
-  
-  data/
-  45_trials/
-  90_trials/
-  315_trials/
-figures/
-
-  45_trials/
-  90_trials/
-  315_trials/
-results/
-
-  45_trials/
-  90_trials/
-  315_trials/
-docs/
-
-  315_trials_DIS.md
+📁 Project Structure
+Root Files
+sketch.ino — Main ESP32 simulation code
+diagram.json — System architecture / simulation diagram
+README.md — Project documentation
+📊 Data (Raw Experimental Datasets)
+data/45_trials/
+data/90_trials/
+data/315_trials/
+📈 Figures (Generated Visualizations)
+figures/45_trials/
+figures/90_trials/
+figures/315_trials/
+📉 Results (Processed Outputs & Analysis)
+results/45_trials/
+results/90_trials/
+results/315_trials/
 
 ---
 
