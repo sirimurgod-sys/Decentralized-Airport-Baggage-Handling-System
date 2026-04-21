@@ -289,12 +289,12 @@ __________________________________________________________
 ##Authors
 
 •	Saubalini Gopalakrishnan Vaneeswari 
-•	Department of Electronics & Communication Engineering 
+•	1st year, Department of Electronics & Communication Engineering 
 •	Visvesvaraya Technological University
 •	Email: 1bi25ec133@bit-bangalore.edu.in
 
 •	Siri M
-•	Department of Electronics & Communication Engineering 
+•	1st year, Department of Electronics & Communication Engineering 
 •	Visvesvaraya Technological University
 •	Email: 1bi25ec148@bit-bangalore.edu.in
 ___________________________________________________________
