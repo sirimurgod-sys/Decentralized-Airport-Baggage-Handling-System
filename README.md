@@ -286,12 +286,12 @@ __________________________________________________________
 
 •	Saubalini Gopalakrishnan Vaneeswari 
 •	1st year, Department of Electronics & Communication Engineering 
-•	Visvesvaraya Technological University
+•	Bangalore Institute of Technology, Visvesvaraya Technological University
 •	Email: 1bi25ec133@bit-bangalore.edu.in
 
 •	Siri M
 •	1st year, Department of Electronics & Communication Engineering 
-•	Visvesvaraya Technological University
+•	Bangalore Institute of Technology, Visvesvaraya Technological University
 •	Email: 1bi25ec148@bit-bangalore.edu.in
 ___________________________________________________________
 ##🙏 Acknowledgments
