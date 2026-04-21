@@ -284,7 +284,7 @@ MIT License
 | 2.0     | April 2026 | Extended to 90 trials    |
 
 __________________________________________________________
-##Authors
+## Authors
 
 ###	Saubalini Gopalakrishnan Vaneeswari 
 -	1st year, Department of Electronics & Communication Engineering 
@@ -298,10 +298,10 @@ __________________________________________________________
 ___________________________________________________________
 ##🙏 Acknowledgments
 
-•	IEEE for research platform 
+-	IEEE for research platform 
 
-•	Espressif Systems for ESP32 & ESP-NOW
+-	Espressif Systems for ESP32 & ESP-NOW
 
-•	Wokwi for simulation support
+-	Wokwi for simulation support
 
 
