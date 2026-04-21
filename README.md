@@ -287,17 +287,17 @@ MIT License
 ## Authors
 
 ### Saubalini Gopalakrishnan Vaneeswari 
--	1st year, Department of Electronics & Communication Engineering 
+- 1st Year, Department of Electronics & Communication Engineering
 -	Bangalore Institute of Technology, Visvesvaraya Technological University
 -	Email: 1bi25ec133@bit-bangalore.edu.in
 
 ###	Siri M
--	1st year, Department of Electronics & Communication Engineering 
+- 1st Year, Department of Electronics & Communication Engineering
 -	Bangalore Institute of Technology, Visvesvaraya Technological University
 -	Email: 1bi25ec148@bit-bangalore.edu.in
 ---
 
-##🙏 Acknowledgments
+## 🙏 Acknowledgments
 
 -	IEEE for research platform 
 
