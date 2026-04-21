@@ -1,34 +1,34 @@
-#Performance Improvement
+# Performance Improvement
 
--Proposed distributed system reduced transit time by 35.4% during congestion (44.0s → 28.5s, p < 0.001)
--Effect size (Cohen's d = 18.2) indicates very large practical significance
--All 5 trials in Proposed system completed successfully vs 0% completion in baseline during node failure
+- Proposed distributed system reduced transit time by 35.4% during congestion (44.0s → 28.5s, p < 0.001)
+- Effect size (Cohen's d = 18.2) indicates very large practical significance
+- All 5 trials in the proposed system completed successfully compared to 0% completion in the baseline during node failure conditions.
 
-#Real-Time Feasibility
+# Real-Time Feasibility
 
--Mean negotiation latency = 177ms (well within 500ms airport requirement)
--95th percentile latency = 210ms (reliable even in worst case)
--Message overhead = 342 bytes per trial (only 0.07% of ESP32 RAM)
+- Mean negotiation latency = 177 ms (well within 500 ms airport requirement)
+- 95th percentile latency = 210 ms (reliable even in worst case)
+- Message overhead = 342 bytes per trial (only 0.07% of ESP32 RAM)
 
-#Fault Tolerance
+# Fault Tolerance
 
--100% completion rate when Node 3 failed (5/5 trials)
--Baseline and Comm-only systems halted completely (0/5 trials)
--System automatically rerouted priority bags around failed node
+- 100% completion rate when Node 3 failed (5/5 trials)
+- Baseline and Communication-only systems halted completely (0/5 trials)
+- System automatically rerouted priority bags around failed node
 
-#Statistical Significance
+# Statistical Significance
 
--All comparisons statistically significant (p < 0.001)
--Proposed vs Baseline: t(8) = 29.1
--Proposed vs Comm-only: t(8) = 16.5
+- All comparisons statistically significant (p < 0.001)
+- Proposed vs Baseline: t(8) = 29.1
+- Proposed vs Comm-only: t(8) = 16.5
 
-#Key Trade-off
+# Key Trade-off
 
--Proposed system 1.3% slower in normal flow (S1) due to negotiation overhead
--Trade-off acceptable given 35.4% improvement during congestion
+- Proposed system is 1.3% slower in normal flow (S1) due to negotiation overhead
+- Trade-off acceptable given 35.4% improvement during congestion
 
-#Overall Conclusion
+# Overall Conclusion
 
--Decentralized coordination eliminates single point of failure
--Achieves real-time performance on low-cost ESP32 hardware
--Validates distributed negotiation for airport baggage handling
+- Decentralized coordination eliminates single point of failure
+- Achieves real-time performance on low-cost ESP32 hardware
+- Validates distributed negotiation for airport baggage handling
