@@ -35,23 +35,27 @@ This work addresses the critical lack of standardized interaction mechanisms amo
 
 ## 📁 Project Structure
 
-├── sketch.ino
-├── diagram.json
-├── README.md
-├── data/
-│ ├── 45_trials/
-│ ├── 90_trials/
-│ └── 315_trials/
-├── figures/
-│ ├── 45_trials/
-│ ├── 90_trials/
-│ └── 315_trials/
-├── results/
-│ ├── 45_trials/
-│ ├── 90_trials/
-│ └── 315_trials/
-└── docs/
-└── 315_trials_DIS.md
+sketch.ino
+diagram.json
+README.md
+  
+  data/
+  45_trials/
+  90_trials/
+  315_trials/
+figures/
+
+  45_trials/
+  90_trials/
+  315_trials/
+results/
+
+  45_trials/
+  90_trials/
+  315_trials/
+docs/
+
+  315_trials_DIS.md
 
 ---
 
